@@ -1,0 +1,53 @@
+epsilon_harmony.admin_config:
+  path: '/admin/config/epsilon_harmony'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Epsilon Harmony'
+  requirements:
+    _permission: 'administer epsilon harmony'
+
+epsilon_harmony.configurations:
+  path: '/admin/config/epsilon_harmony/configurations'
+  defaults:
+    _form:  '\Drupal\epsilon_harmony\Form\ConfigForm'
+    _title: 'Configure the Epsilon Harmony API Account'
+  requirements:
+    _permission: 'administer epsilon harmony'
+
+epsilon_harmony.test:
+  path: '/admin/config/epsilon_harmony/test'
+  defaults:
+    _controller: '\Drupal\epsilon_harmony\Controller\EpsilonHarmonyController::testApi'
+    _title: 'Configure the Epsilon Harmony API Account'
+  requirements:
+    _permission: 'administer epsilon harmony'
+
+epsilon_harmony.logs:
+  path: '/admin/config/epsilon_harmony/logs'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+    _entity_list: 'epsilon_harmony_log'
+    _title: 'Epsilon Harmony logs'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view epsilon logs'
+
+entity.epsilon_harmony_log.canonical:
+  path: '/admin/config/epsilon_harmony/logs/{epsilon_harmony_log}'
+  defaults:
+    # Calls the view controller, defined in the annotation of the contact
+    # entity. This marks this route as belonging to this entity type.
+    _entity_view: 'epsilon_harmony_log'
+    _title: 'Epsilon Harmony logs'
+  requirements:
+    # Calls the access controller of the entity, passing in the suffix ('view')
+    # as the $operation parameter to checkAccess().
+    _permission: 'view epsilon logs'
+
+epsilon_harmony.clear_logs:
+  path: '/admin/config/epsilon_harmony/logs/clear'
+  defaults:
+    _form: '\Drupal\epsilon_harmony\Form\ClearLogsForm'
+    _title: 'Confirm Deletion'
+  requirements:
+    _permission: 'administer epsilon harmony'

@@ -1,0 +1,4 @@
+services:
+  epsilon_harmony.api_service:
+    class: Drupal\epsilon_harmony\Services\EpsilonApiFactory
+    arguments: []

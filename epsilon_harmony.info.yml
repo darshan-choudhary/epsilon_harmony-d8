@@ -1,0 +1,6 @@
+name: Epsilon Harmony
+type: module
+description: A client module to connect to Epsilon Harmony APIs.
+core: 8.x
+dependencies:
+  - drupal:views

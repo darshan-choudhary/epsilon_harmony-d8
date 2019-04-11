@@ -1,0 +1,24 @@
+epsilon_harmony.admin_config:
+  title: Epsilon Harmony
+  route_name: epsilon_harmony.admin_config
+  parent: system.admin_config
+  description: 'Epsilon harmony configuration.'
+  weight: 1
+epsilon_harmony.configurations:
+  title: Configurations
+  route_name: epsilon_harmony.configurations
+  parent: epsilon_harmony.admin_config
+  description: 'Epsilon harmony configuration form.'
+  weight: 2
+epsilon_harmony.logs:
+  title: Logs
+  route_name: epsilon_harmony.logs
+  parent: epsilon_harmony.admin_config
+  description: 'Logs for epsilon harmony API calls.'
+  weight: 3
+epsilon_harmony.test:
+  title: Test
+  route_name: epsilon_harmony.test
+  parent: epsilon_harmony.admin_config
+  description: 'Test epsilon harmony API.'
+  weight: 4

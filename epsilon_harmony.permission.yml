@@ -1,0 +1,6 @@
+administer epsilon harmony:
+  title: Administer Epsilon Harmony
+  restrict access: true
+view epsilon logs:
+  title: View epsilon logs
+  restrict access: true

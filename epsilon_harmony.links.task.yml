@@ -1,0 +1,15 @@
+epsilon_harmony.configurations:
+  title: Configurations
+  route_name : epsilon_harmony.configurations
+  base_route: epsilon_harmony.configurations
+  weight: 1
+epsilon_harmony.logs:
+  title: Logs
+  route_name: epsilon_harmony.logs
+  base_route: epsilon_harmony.configurations
+  weight: 2
+epsilon_harmony.test:
+  title: Test
+  route_name: epsilon_harmony.test
+  base_route: epsilon_harmony.configurations
+  weight: 3
